@@ -33,11 +33,11 @@ body {
 }
 .heading::before {
   margin-right: 20px;
-  width: 6.7vw;
+  width: 6vw;
 }
 .heading::after {
   margin-left: 20px;
-  width: 6.7vw;
+  width: 6vw;
 }
 
 .checkbox-container {
