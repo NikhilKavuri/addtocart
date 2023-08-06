@@ -51,5 +51,5 @@ addToCart.addEventListener("click", () => {
     }
   setTimeout(() => {
     showToast.style.display = "none";
-  }, 5000);
+  }, 2000);
 });
