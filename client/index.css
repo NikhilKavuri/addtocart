@@ -1,0 +1,259 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-container {
+  width: 30%;
+  min-height: 70vh;
+  margin: 50px auto;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #3c8956;
+}
+
+.heading::before,
+.heading::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  background-color: #3c8956;
+  margin: 0 10px;
+  opacity: 0.5;
+}
+.heading::before {
+  margin-right: 20px;
+  width: 6.7vw;
+}
+.heading::after {
+  margin-left: 20px;
+  width: 6.7vw;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.checkbox-container:hover {
+  border: 1px solid rgb(71, 153, 73);
+}
+
+.pair {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.radio {
+  width: 100%;
+  display: flex;
+}
+.radio-input {
+  cursor: pointer;
+  width: 1rem;
+  height: 1.2rem;
+  margin-right: 10px;
+}
+
+.about-product {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-discount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 35px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #aaa;
+  margin-right: 5px;
+  display: none;
+}
+
+.discount-num {
+  color: #000000;
+  font-weight: 600;
+}
+
+table {
+  width: 20%;
+  margin-top: 10px;
+  display: none;
+}
+
+th,
+td {
+  padding: 5px;
+  text-align: center;
+}
+th {
+  text-align: left;
+}
+.color-select,
+.size-select {
+  width: 60px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+.box {
+  width: 100%;
+}
+.box > span {
+  margin-left: 33px;
+}
+.product-head {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.popular {
+  color: #3c8956;
+  font-weight: 700;
+  display: none;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.add-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #3c8956;
+  color: white;
+  border-radius: 2px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.free-txt {
+  color: #3c8956;
+}
+.success-toast-container {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: calc(50vw - 7em);
+  margin-bottom: 10px;
+  background-color: rgb(169, 243, 171);
+  width: fit-content;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.success {
+  color: #3c8956;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 400px) {
+  .cart-container {
+    width: 100%;
+    min-height: 70vh;
+    margin: 50px auto;
+
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .heading {
+    font-size: 22px;
+    color: #3c8956;
+  }
+  .heading::before,
+  .heading::after {
+    content: "";
+    display: inline-block;
+
+    height: 1px;
+    background-color: #3c8956;
+    margin: 0 10px;
+    opacity: 0.5;
+  }
+  .heading::before {
+    margin-right: 20px;
+    width: 60px;
+  }
+  .heading::after {
+    margin-left: 20px;
+    width: 60px;
+  }
+  .success-toast-container {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 10px;
+    background-color: rgb(169, 243, 171);
+    width: 50vw;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+ @media screen and (min-width:401px) and (max-width:700px){
+    .cart-container {
+        width: 100%;
+        min-height: 70vh;
+        margin: 50px auto;
+        border-radius: 5px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+ }
+ @media screen and (min-width:701px) and (max-width:1060px) {
+    .cart-container {
+        width: 80%;
+        min-height: 70vh;
+        margin: 50px auto;
+        border-radius: 5px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .heading::before {
+        margin-right: 20px;
+        width: 20vw;
+      }
+      .heading::after {
+        margin-left: 20px;
+        width: 20vw;
+      }
+ }
