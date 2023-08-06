@@ -7,7 +7,6 @@ let activeContainerIndex = -1;
 const addToCart = document.getElementsByClassName("add-btn")[0];
 const showToast = document.getElementsByClassName("success-toast-container")[0];
 
-
 for (let i = 0; i < checkBoxContainers.length; i++) {
   checkBoxContainers[i].addEventListener("click", () => {
     if (activeContainerIndex !== -1 && activeContainerIndex !== i) {
@@ -39,16 +38,21 @@ for (let i = 0; i < checkBoxContainers.length; i++) {
   });
 }
 addToCart.addEventListener("click", () => {
-    if(activeContainerIndex>=0) showToast.style.display = "block";
-    else{
-        showToast.firstElementChild.textContent = "Please select something to add";
-        showToast.firstElementChild.style.color ="white";
-        showToast.style.backgroundColor = "#F45050";
-        showToast.firstElementChild.style.textAlign ="center"
-        showToast.style.width= "20vw"
-        showToast.style.left = "39vw"
-        showToast.style.display = "block";
-    }
+  if (activeContainerIndex >= 0) {
+    showToast.firstElementChild.textContent = "Added to cart";
+    showToast.style.backgroundColor = "#3c8956";
+    showToast.firstElementChild.style.color = "white";
+    showToast.firstElementChild.style.textAlign = "center";
+    showToast.style.display = "block";
+  } else {
+    showToast.firstElementChild.textContent = "Please select something to add";
+    showToast.firstElementChild.style.color = "white";
+    showToast.style.backgroundColor = "#F45050";
+    showToast.firstElementChild.style.textAlign = "center";
+    showToast.style.width = "20vw";
+    showToast.style.left = "39vw";
+    showToast.style.display = "block";
+  }
   setTimeout(() => {
     showToast.style.display = "none";
   }, 2000);
