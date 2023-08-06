@@ -41,7 +41,7 @@ addToCart.addEventListener("click", () => {
   if (activeContainerIndex >= 0) {
     showToast.firstElementChild.textContent = "Added to Cart Successfully";
     showToast.style.backgroundColor = "rgb(169, 243, 171)";
-    showToast.firstElementChild.style.color = "white";
+    showToast.firstElementChild.style.color = "#3c8956";
     showToast.firstElementChild.style.textAlign = "center";
     showToast.style.display = "block";
   } else {
