@@ -39,8 +39,8 @@ for (let i = 0; i < checkBoxContainers.length; i++) {
 }
 addToCart.addEventListener("click", () => {
   if (activeContainerIndex >= 0) {
-    showToast.firstElementChild.textContent = "Added to cart";
-    showToast.style.backgroundColor = "#3c8956";
+    showToast.firstElementChild.textContent = "Added to Cart Successfully";
+    showToast.style.backgroundColor = "rgb(169, 243, 171)";
     showToast.firstElementChild.style.color = "white";
     showToast.firstElementChild.style.textAlign = "center";
     showToast.style.display = "block";
