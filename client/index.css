@@ -1,9 +1,37 @@
+.about-product {
+  display: flex;
+  flex-direction: column;
+}
+.add-btn {
+  width: 100%;
+  height: 50px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #3c8956;
+  color: white;
+  border-radius: 2px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
-
+.box {
+  width: 100%;
+}
+.box > span {
+  margin-left: 33px;
+}
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .cart-container {
   width: 30%;
   min-height: 70vh;
@@ -12,7 +40,31 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
 
+.checkbox-container:hover {
+  border: 1px solid #007f61;
+  transform: translateY(-2px);
+  transition: 0.3s ease;
+}
+.discount-num {
+  color: #000000;
+  font-weight: 600;
+}
+.free-txt {
+  color: #007f61;
+  opacity: 0.7;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
 .heading {
   font-size: 18.46px;
   margin-bottom: 20px;
@@ -31,20 +83,17 @@ body {
   background-color: #929292;
   opacity: 0.3;
 }
-.checkbox-container {
+.items {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  cursor: pointer;
-  border: 1px solid grey;
-  border-radius: 5px;
+  flex-direction: column;
+  gap: 20px;
 }
-
-.checkbox-container:hover {
-  border: 1px solid #007f61;
-  transform: translateY(-2px);
-  transition: 0.3s ease;
+.original-price {
+  text-decoration: line-through;
+  color: #9f9f9f;
+  margin-right: 5px;
+  display: none;
+  font-size: 0.8em;
 }
 
 .pair {
@@ -53,22 +102,6 @@ body {
   align-items: center;
   width: 100%;
 }
-.radio {
-  width: 100%;
-  display: flex;
-}
-.radio-input {
-  cursor: pointer;
-  width: 1rem;
-  height: 1.2rem;
-  margin-right: 10px;
-}
-
-.about-product {
-  display: flex;
-  flex-direction: column;
-}
-
 .price-discount {
   display: flex;
   align-items: center;
@@ -87,45 +120,6 @@ body {
   font-size: 16.9px;
 }
 
-.original-price {
-  text-decoration: line-through;
-  color: #9f9f9f;
-  margin-right: 5px;
-  display: none;
-  font-size: 0.8em;
-}
-
-.discount-num {
-  color: #000000;
-  font-weight: 600;
-}
-
-table {
-  width: 20%;
-  margin-top: 10px;
-  display: none;
-}
-
-th,
-td {
-  padding: 5px;
-  text-align: center;
-}
-th {
-  text-align: left;
-}
-.color-select,
-.size-select {
-  width: 70px;
-  padding: 5px;
-  margin-bottom: 5px;
-}
-.box {
-  width: 100%;
-}
-.box > span {
-  margin-left: 33px;
-}
 .product-head {
   display: flex;
   justify-content: space-between;
@@ -145,44 +139,15 @@ th {
   font-size: 400;
   font-size: 14.46px;
 }
-.items {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.btn-container {
+.radio {
   width: 100%;
   display: flex;
-  justify-content: center;
 }
-.add-btn {
-  width: 100%;
-  height: 50px;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  background-color: #3c8956;
-  color: white;
-  border-radius: 2px;
-  margin-top: 20px;
-  border: none;
-  outline: none;
+.radio-input {
   cursor: pointer;
-}
-.total {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-.free-txt {
-  color: #007f61;
-  opacity: 0.7;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-}
-.total-txt {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  width: 1rem;
+  height: 1.2rem;
+  margin-right: 10px;
 }
 .success-toast-container {
   display: none;
@@ -195,6 +160,37 @@ th {
   padding: 20px;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.color-select,
+.size-select {
+  width: 70px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+table {
+  width: 20%;
+  margin-top: 10px;
+  display: none;
+}
+
+th,
+td {
+  padding: 5px;
+  text-align: center;
+}
+th {
+  text-align: left;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.total-txt {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 
 .success {
