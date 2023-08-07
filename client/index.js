@@ -20,7 +20,8 @@ for (let i = 0; i < checkBoxContainers.length; i++) {
     }
     if (activeContainerIndex !== i) {
       checkBoxContainers[i].classList.add("active");
-      checkBoxContainers[i].style.backgroundColor = "#E5F9DB";
+      checkBoxContainers[i].style.backgroundColor = "#F4FBF9";
+      checkBoxContainers[i].style.outline = "#007F61";
       tables[i].style.display = "block";
       originalPrices[i].style.display = "block";
       populars[i].style.display = "block";
@@ -36,6 +37,12 @@ for (let i = 0; i < checkBoxContainers.length; i++) {
       activeContainerIndex = -1;
     }
   });
+  let tablesInContainer = checkBoxContainers[i].querySelectorAll("table");
+  for (let j = 0; j < tablesInContainer.length; j++) {
+    tablesInContainer[j].addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+  }
 }
 addToCart.addEventListener("click", () => {
   if (activeContainerIndex >= 0) {

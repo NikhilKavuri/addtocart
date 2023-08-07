@@ -51,7 +51,7 @@ body {
 }
 
 .checkbox-container:hover {
-  border: 1px solid rgb(71, 153, 73);
+  border: 1px solid #007f61;
   transform: translateY(-2px);
   transition: 0.3s ease;
 }
@@ -68,11 +68,10 @@ body {
 }
 .radio-input {
   cursor: pointer;
-  width: 1rem;
-  height: 1.2rem;
+  width: 9.04px;
+  height: 9.04px;
   margin-right: 10px;
 }
-
 .about-product {
   display: flex;
   flex-direction: column;
@@ -82,20 +81,26 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 35px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 12.65px;
+  margin-left: 30px;
   margin-bottom: 10px;
 }
 
 .price {
-  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
   margin-right: 5px;
+  font-size: 16.9px;
 }
 
 .original-price {
   text-decoration: line-through;
-  color: #aaa;
+  color: #9f9f9f;
   margin-right: 5px;
   display: none;
+  font-size: 0.8em;
 }
 
 .discount-num {
@@ -119,7 +124,7 @@ th {
 }
 .color-select,
 .size-select {
-  width: 60px;
+  width: 70px;
   padding: 5px;
   margin-bottom: 5px;
 }
@@ -136,9 +141,17 @@ th {
   margin-bottom: 10px;
 }
 .popular {
-  color: #3c8956;
-  font-weight: 700;
+  color: #007f61;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 12.65px;
   display: none;
+}
+.pair1,
+.pair2.pair3 {
+  font-family: "Inter", sans-serif;
+  font-size: 400;
+  font-size: 14.46px;
 }
 .items {
   display: flex;
@@ -153,6 +166,9 @@ th {
 .add-btn {
   width: 100%;
   height: 50px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
   background-color: #3c8956;
   color: white;
   border-radius: 2px;
@@ -167,7 +183,14 @@ th {
   margin-top: 30px;
 }
 .free-txt {
-  color: #3c8956;
+  color: #007f61;
+  opacity: 0.7;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+.total-txt {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 .success-toast-container {
   display: none;
@@ -192,32 +215,30 @@ th {
     width: 100%;
     min-height: 70vh;
     margin: 50px auto;
-
     border-radius: 5px;
     padding: 20px;
     box-sizing: border-box;
   }
   .heading {
-    font-size: 22px;
-    color: #3c8956;
+    font-size: 16px;
+    color: #007f61;
   }
   .heading::before,
   .heading::after {
     content: "";
     display: inline-block;
-
     height: 1px;
-    background-color: #3c8956;
+    background-color: #007f61;
     margin: 0 10px;
     opacity: 0.5;
   }
   .heading::before {
     margin-right: 20px;
-    width: 60px;
+    width: 15vw;
   }
   .heading::after {
     margin-left: 20px;
-    width: 60px;
+    width: 15vw;
   }
   .success-toast-container {
     display: none;
@@ -231,31 +252,39 @@ th {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 }
- @media screen and (min-width:401px) and (max-width:700px){
-    .cart-container {
-        width: 100%;
-        min-height: 70vh;
-        margin: 50px auto;
-        border-radius: 5px;
-        padding: 20px;
-        box-sizing: border-box;
-      }
- }
- @media screen and (min-width:701px) and (max-width:1060px) {
-    .cart-container {
-        width: 80%;
-        min-height: 70vh;
-        margin: 50px auto;
-        border-radius: 5px;
-        padding: 20px;
-        box-sizing: border-box;
-      }
-      .heading::before {
-        margin-right: 20px;
-        width: 20vw;
-      }
-      .heading::after {
-        margin-left: 20px;
-        width: 20vw;
-      }
- }
+@media screen and (min-width: 401px) and (max-width: 700px) {
+  .cart-container {
+    width: 100%;
+    min-height: 70vh;
+    margin: 50px auto;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .heading::before {
+    margin-right: 20px;
+    width: 17vw;
+  }
+  .heading::after {
+    margin-left: 20px;
+    width: 17vw;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 1200px) {
+  .cart-container {
+    width: 80%;
+    min-height: 70vh;
+    margin: 50px auto;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .heading::before {
+    margin-right: 20px;
+    width: 20vw;
+  }
+  .heading::after {
+    margin-left: 20px;
+    width: 20vw;
+  }
+}
