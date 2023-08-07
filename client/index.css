@@ -20,22 +20,17 @@ body {
   margin-right: 5px;
   color: #3c8956;
 }
-.header{
+.header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.headerline{
+.headerline {
   width: 30%;
   height: 1px;
-  background-color: #007f61;
+  background-color: #929292;
   opacity: 0.3;
 }
-/* .headerline::before{
-  content: " ";
-  display: inline-block;
-  background-color: #767676;
-} */
 .checkbox-container {
   display: flex;
   justify-content: space-between;
@@ -207,8 +202,6 @@ th {
   margin-right: 10px;
 }
 
-
-/* Media queries for different screen sizes */
 @media screen and (max-width: 400px) {
   .cart-container {
     width: 100%;
@@ -223,16 +216,17 @@ th {
     font-size: 18px;
     text-align: center;
   }
-  .headerline{
+  .headerline {
     width: 22%;
     height: 1px;
-    background-color: #007f61;
+    background-color: #929292;
+    opacity: 0.7;
   }
-  .total-txt{
+  .total-txt {
     text-align: right;
   }
 }
-@media screen and (min-width:400px) and (max-width:475px) {
+@media screen and (min-width: 400px) and (max-width: 475px) {
   .cart-container {
     width: 70%;
     min-height: 70vh;
@@ -246,12 +240,13 @@ th {
     font-size: 18px;
     text-align: center;
   }
-  .headerline{
+  .headerline {
     width: 15%;
     height: 1px;
-    background-color: #007f61;
+    background-color: #929292;
+    opacity: 0.6;
   }
-  .total-txt{
+  .total-txt {
     text-align: right;
   }
 }
@@ -269,12 +264,13 @@ th {
     font-size: 18px;
     text-align: center;
   }
-  .headerline{
+  .headerline {
     width: 22%;
     height: 1px;
-    background-color: #007f61;
+    background-color: #929292;
+    opacity: 0.5;
   }
-  .total-txt{
+  .total-txt {
     text-align: right;
   }
 }
@@ -294,7 +290,7 @@ th {
     text-align: center;
   }
 }
-@media screen and (min-width:701px) and (max-width:760px) {
+@media screen and (min-width: 701px) and (max-width: 760px) {
   .cart-container {
     width: 50%;
     min-height: 70vh;
@@ -308,10 +304,11 @@ th {
     font-size: 18px;
     text-align: center;
   }
-  .headerline{
+  .headerline {
     width: 22%;
     height: 1px;
-    background-color: #007f61;
+    background-color: #929292;
+    opacity: 0.4;
   }
 }
 @media screen and (min-width: 1201px) and (max-width: 1430px) {
@@ -328,12 +325,13 @@ th {
     font-size: 18px;
     text-align: center;
   }
-  .headerline{
+  .headerline {
     width: 25%;
     height: 1px;
-    background-color: #007f61;
+    background-color: #929292;
+    opacity: 0.3;
   }
-  .headerline::before{
+  .headerline::before {
     content: " ";
     display: inline-block;
     height: 1px;
